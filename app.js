@@ -1,16 +1,18 @@
-form = document.getElementById('form');
-result = document.getElementById('result');
-restartButton = document.getElementById('restart');
-resultText = document.getElementById('result-text');
+"use strict";
 
+let form = document.getElementById('form');
+let result = document.getElementById('result');
+let restartButton = document.getElementById('restart');
+let resultText = document.getElementById('result-text');
 
-reportValidity = (Name) => {
-    if (name.value.length < 3) {
+let reportValidity = (personName) => {
+    if (personName.value.length < 3) {
         resultText.classList.add('error');
-        resultText.innerHTML = 'Name must be at least 3 characters long';
+        message = 'Name must be at least 3 characters long';
     } else {
-        resultText.innerHTML.classList.add('success');
+        message = 'Name is valid';
     }
+    return message;
 }
 
 buildMessage = (name, mood) => {
@@ -37,11 +39,12 @@ resetMessage = () => {
 
 
 form.addEventListener('submit', (e) => {
-    name = document.getElementById('name').value;
+    personName = document.getElementById('name').value;
     mood = document.getElementById('mood').value;
     e.preventDefault();  
-    reportValidity();
-    renderMessage(buildMessage(name, mood));
+    reportValidity(personName);
+    message = buildMessage(personName, mood);
+    renderMessage(message);
 });
 
 restartButton.addEventListener('click', () => {
