@@ -21,8 +21,6 @@ header {
     padding: var(--space);
 }
 
-
-
 nav {
     font-family: Arial;
     display: flex;
