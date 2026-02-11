@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Exam 1.0</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="#form">Form</a>
-            <a href="#result">result</a>
+            <a href="#result">Result</a>
     </header>
     <h1>Web Exam 1.0</h1>
     <section class="form" id="form">
         <form action="">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" minlength="3" required>
-            <button type="submit">Generar</button>
+            <label for="mood">Select your mood</label>
+            <select name="group" id="group" placeholder="Group" minlength="3" required>
+                <option value="Happy">Happy</option>
+                <option value="Serious">Serious</option>
+                <option value="Sad">Sad</option>
+            </select>
+            <button type="submit" id="generate">generate</button>
         </form>
     </section>
-    <section id="result">
-        <p></p>
+    <br>
+    <br>
+    <section id="result" class="result">
+        <button id="restart">Restart</button>
+        <p id="result-text">Nada para mostrar aún</p>
     </section>
     <footer>
-        <p>Copyright 2026</p>
+        <p>Entrega: WEB-01  | Grupo: <p id="group"></p> | Código: <p id="code"></p> </p>
     </footer>   
     <script src="app.js"></script>
 </body>
