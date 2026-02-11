@@ -21,8 +21,7 @@ let reportValidity = personName => {
 }
 
 const buildMessage = (name, mood) => {
-    console.log(name, mood);
-    console.log(document.getElementById('name').value);
+
     if (mood === 'Happy') {
         message = `Hello ${name}! You are ${mood}. Always be happy!❤️`;
     } else if (mood === 'Serious') {
