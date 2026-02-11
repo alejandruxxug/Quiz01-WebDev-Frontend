@@ -8,7 +8,7 @@
     --ok: #16a34a; 
     --space: 16px; 
     --radius: 12px; 
-  }
+}
 
 body {
     background-color: var(--bg);
